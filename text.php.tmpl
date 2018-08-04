@@ -38,10 +38,16 @@ if (\$count == 4){
         <link rel="profile" href="http://gmpg.org/xfn/11" />
 	#if $Extras.has_key('web_url')
 	<link rel="canonical" href="$Extras.web_url/summary.html"/>
-	#end if   
+	#end if
+    #if $Extras.has_key('cwop')
 <?php        
         echo"<title>$station.location ($Extras.cwop) Tabelle Climatiche per \$title </title>";
 ?>
+    #else
+<?php        
+        echo"<title>$station.location - Tabelle Climatiche per \$title </title>";
+?>
+    #end if
         <!-- Open Graph -->
         <meta property="og:site_name" content="$station.location Tabelle e Record" />
 	<meta property="og:title" content="Climate Summaries"/>

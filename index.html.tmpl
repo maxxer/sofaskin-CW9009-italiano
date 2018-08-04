@@ -95,7 +95,7 @@
                 <nav>
                     <ul class="topnav" id="myTopnav">
 			<li class="icon"><a href="javascript:void(0);" onclick="myFunction()"><i class="fa fa-bars" ></i></a></li>
-                        <li class="active" ><a href="/" >Correnti</a></li>
+                        <li class="active" ><a href="/" >Corrente</a></li>
                         <li><a href="week.html" >Settimana</a></li>
                         <li><a href="month.html" >Mese</a></li>
                         <li><a href="year.html" >Anno</a></li>
@@ -154,7 +154,7 @@
                     </table>
                 </div>
 
-<!-- personalizzazione Webcam -->
+<!-- personalizzazione Webcam 
 			<div class="card" >
 			<img class <h1><i class="fa fa-camera" style="color:#999"></i> Webcam</h1>
 			<div style="text-align:center">
@@ -163,7 +163,7 @@
 			<a href="web3.html"> <img src="/foto/webcam3/webcamsmall3.php" /></a><p>
 			</div>
 			</div>
-<!-- fine personalizzazione webcam -->
+ fine personalizzazione webcam -->
 
 
 
@@ -187,7 +187,7 @@
                         <tr><td>RMS Vento</td><td>$day.wind.rms</td><td></td></tr>
                         <tr><td>Velocit&agrave Vento Vettoriale</td><td>$day.wind.vecavg</td><td></td></tr>
                         <tr><td>Direzione Vento Vettoriale</td><td>$day.wind.vecdir</td><td></td></tr>
-                        			#if $day.extraTemp1.has_data
+                        #if $day.extraTemp1.has_data
                         <tr><td>High Pond Temp</td><td>$day.extraTemp1.max</td><td>$day.extraTemp1.maxtime</td></tr>
                         <tr><td>Low Pond Temp</td><td>$day.extraTemp1.min</td><td>$day.extraTemp1.mintime</td></tr>
                         #end if
@@ -205,7 +205,7 @@
                         #end if
                     </table>
                 </div>
-	
+<!--
 		<div class="card" >
 		    <!--Leap Year Code --!>
 		    #set $yr = int($day.dateTime.format("%Y"))%4
@@ -245,26 +245,25 @@
 		    		#set $n = 365
 			#end if
 		    #end if
-                   </a>
+                   
                     
                 </div>
                     
                 
- 
+-->
 		<!-- $Extras.cameratitle -->
 		<!-- $Extras.cameratitle2 -->
 
-<!-- Cartina Europa -->
+<!-- Radar Italia -->
 <div class="card">
- <a href='http://it.sat24.com/it' target="_blank">
-   <img id="radar" class="space small" src="https://api.sat24.com/animated/EU/visual/1/Central%20European%20Standard%20Time/1057383"
-   alt="Radar">
+ <a href='http://www.protezionecivile.gov.it/images/rete_radar/VMI/VMI.JPEG' target="_blank">
+   <img id="radar" class="space small" src="http://www.protezionecivile.gov.it/images/rete_radar/VMI/VMI.JPEG" alt="Radar">
  </a>
  <h3>
-<a id="btn1" class="cpointer" >Meteo Europa</a> 
+<a id="btn1" class="cpointer" >Radar Italia</a> 
  </h3>
 </div>
-<!-- Fine Europa -->
+<!-- Fine Radar Italia -->
 
 
             </div>
@@ -343,10 +342,11 @@
                     <img src="dayrain.png" alt="rain" />
                     <img src="daywind.png" alt="wind" />
                     <img src="daywinddir.png" alt="Hi Wind" />
-		    <img src="daywindvec.png" alt="Wind Vector" />
+<!--                    <img src="daywindvec.png" alt="Wind Vector" />-->
                     <img src="daytempchill.png" alt="heatchill" />
-		    <img src="daybarometer.png" alt="barometer"/>
-		    <img src="dayinhumid.png" alt="Inside/Outside Humidity" />
+                    <img src="daybarometer.png" alt="barometer"/>
+                    <img src="dayinhumid.png" alt="Outside Humidity" />
+<!--
                     #if $day.radiation.has_data
                     <img src="dayradiation.png" alt="Radiation" />
                     #end if
@@ -356,6 +356,7 @@
                     #if $day.rxCheckPercent.has_data
                     <img src="dayrx.png" alt="day rx percent"/>
                     #end if
+-->
                     #if $day.extraTemp1.has_data
                     <img src="daypond.png" alt="Pond Temperatures" />
                     #end if
