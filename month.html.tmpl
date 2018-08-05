@@ -3,68 +3,68 @@
     <head itemscope itemtype="http://schema.org/Website">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta http-equiv="Refresh" content="180">
-	#if $Extras.has_key('cwop')
+        <meta http-equiv="Refresh" content="180">
+        #if $Extras.has_key('cwop')
         <meta name="description" content="Stazione Meteo $station.location ($Extras.cwop) - sito generato da WeeWX">
         #else
         <meta name="description" content="Stazione Meteo $station.location - sito meteo generato da WeeWX">
-	#end if
+        #end if
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="profile" href="http://gmpg.org/xfn/11" />
-	#if $Extras.has_key('web_url')
-	<link href="$Extras.web_url/month.html" itemprop="url"/>
-	#end if
+        #if $Extras.has_key('web_url')
+        <link href="$Extras.web_url/month.html" itemprop="url"/>
+        #end if
         
-	<title itemprop="name">$station.location Tabelle Meteo Mensili</title>
+        <title itemprop="name">$station.location Tabelle Meteo Mensili</title>
         
         <!-- Open Graph -->
-	<meta property="og:site_name" content="$station.location Tabelle Meteo Mensili" />
-	<meta property="og:title" content="Tabelle Meteo Mensili"/>
-	#if $Extras.has_key('web_url')
-	<meta property="og:url" content="$Extras.web_url/month.html"/>
-	#end if
+        <meta property="og:site_name" content="$station.location Tabelle Meteo Mensili" />
+        <meta property="og:title" content="Tabelle Meteo Mensili"/>
+        #if $Extras.has_key('web_url')
+        <meta property="og:url" content="$Extras.web_url/month.html"/>
+        #end if
         <meta property="og:description" content="Tabelle Meteo Mensili di $station.location - sito meteo generato da WeeWX" />
-	<meta property="og:type" content="website" />
+        <meta property="og:type" content="website" />
 
         <!-- Icons -->
         <link rel="icon" href="favicon.ico" type="image/png">
-	<link rel="apple-touch-icon" href="touch-icon.png"/>
+        <link rel="apple-touch-icon" href="touch-icon.png"/>
         
         <!-- Styles -->
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
         
         <!-- Skripte -->
         <script src="js/modernizr-2.6.2.min.js"></script>
-	<script src="js/checkdiff.js"></script>
-    <script type="text/javascript">
-      function nocache(){
-        epoch=new Date().getTime();
-        elems=document.getElementsByTagName("img");
-        for (i=0;i<elems.length;i++){
-          item=elems[i].getAttribute("src");
-          if (String(item).endsWith(".png")) elems[i].setAttribute("src",item+"?"+epoch);
-        }
-        elems = document.getElementsByTagName("a");
-        for (i=0;i<elems.length;i++){
-          item=elems[i].getAttribute("href");
-          if (String(item).endsWith(".png")) elems[i].setAttribute("href",item+"?"+epoch);
-        }
-      }
-    </script>
+        <script src="js/checkdiff.js"></script>
+        <script type="text/javascript">
+          function nocache(){
+            epoch=new Date().getTime();
+            elems=document.getElementsByTagName("img");
+            for (i=0;i<elems.length;i++){
+              item=elems[i].getAttribute("src");
+              if (String(item).endsWith(".png")) elems[i].setAttribute("src",item+"?"+epoch);
+            }
+            elems = document.getElementsByTagName("a");
+            for (i=0;i<elems.length;i++){
+              item=elems[i].getAttribute("href");
+              if (String(item).endsWith(".png")) elems[i].setAttribute("href",item+"?"+epoch);
+            }
+          }
+        </script>
     </head>
     <body onload="nocache()">
-    <header>
+        <header>
             <div class="container-fix" >
                 <div class="h-left" >
                 <h1><i class="fa fa-cloud" ></i> $station.location </h1>
                 <p>$station.latitude[0]&deg; $station.latitude[1]' $station.latitude[2] | $station.longitude[0]&deg; $station.longitude[1]' $station.longitude[2] | $station.altitude | <a href="https://www.google.com/maps/?q=$station.latitude[0]&deg;%20$station.latitude[1]%20$station.latitude[2],$station.longitude[0]&deg;%20$station.longitude[1]%20$station.longitude[2]" target="_blank" ><i class="fa fa-map-marker" ></i> Mostra sulla mappa</a></p>
                 <h2>Tabelle Meteo Mensili</h2>
                 <p><i class="fa fa-clock-o" ></i> $current.dateTime $current.dateTime.format("%Z")</p>
-		<p id="freshweather" class="m-orange"></p>
-		<script type="text/javascript">
-                      window.onload = checkDiff("$current.dateTime ($current.dateTime.format('%Z'))");
+                <p id="freshweather" class="m-orange"></p>
+                <script type="text/javascript">
+                    //window.onload = checkDiff("$current.dateTime ($current.dateTime.format('%Z'))");
                 </script>
                 </div>
                 
@@ -74,26 +74,26 @@
                         <tr><td><b>Software:</b></td><td><a href="http://weewx.com/" target="_blank" >WeeWX v$station.version</a></td></tr>
                         <tr><td><b>Weewx uptime:</b></td><td>$station.uptime</td></tr>
                         <tr><td><b>Server uptime:</b></td><td>$station.os_uptime</td></tr>
-			#if $Extras.has_key('cwop') and $Extras.has_key('crahs')
-			<tr><td><b>Station IDs:</b></td><td><a href="$Extras.cwop_url" target="_blank">$Extras.cwop</a> | <a href="$Extras.crahs_url" target="_blank">$Extras.crahs</a></td></tr>
-			#end if
+                        #if $Extras.has_key('cwop') and $Extras.has_key('crahs')
+                        <tr><td><b>Station IDs:</b></td><td><a href="$Extras.cwop_url" target="_blank">$Extras.cwop</a> | <a href="$Extras.crahs_url" target="_blank">$Extras.crahs</a></td></tr>
+                        #end if
                     </table>
                 </div>
 
                 <nav>
                     <ul class="topnav" id="myTopnav">
-			<li class="icon"><a href="javascript:void(0);" onclick="myFunction()"><i class="fa fa-bars" ></i></a></li>
+                        <li class="icon"><a href="javascript:void(0);" onclick="myFunction()"><i class="fa fa-bars" ></i></a></li>
                         <li><a href="/" >Corrente</a></li>
                         <li><a href="week.html" >Settimana</a></li>
                         <li class="active"><a href="month.html" >Mese</a></li>
                         <li><a href="year.html" >Anno</a></li>
-			<li><a href="summary.html" >Tabelle</a></li>
-			<li><a href="station.html" >Stazione</a></li>
-			<li><a href="RSS/weewx_rss.xml" ><i class="fa fa-rss" ></i></a></li>
+                        <li><a href="summary.html" >Tabelle</a></li>
+                        <li><a href="station.html" >Stazione</a></li>
+                        <li><a href="RSS/weewx_rss.xml" ><i class="fa fa-rss" ></i></a></li>
                     </ul>
                 </nav>
             </div>
-	</header>
+        </header>
         
         <div class="main" >
         <div class="container" >
@@ -141,7 +141,7 @@
 -->                    </table>
                 </div>
 
-		<div class="card" >
+                <div class="card" >
                     <h1><i class="fa fa-calendar m-orange" ></i> $month($months_ago=12).dateTime.format("%B %Y") Scorso</h1>
                     <table class="tablespacer">
                         <tr><td>Temperatura Max</td><td>$month($months_ago=12).outTemp.max</td><td>$month($months_ago=12).outTemp.maxtime</td></tr>
@@ -179,7 +179,7 @@
                         <tr><td>High Radiation</td><td>$month($months_ago=12).radiation.max</td><td>$month($months_ago=12).radiation.maxtime</td></tr>
                         <tr><td>Low Radiation</td><td>$month($months_ago=12).radiation.min</td><td>$month($months_ago=12).radiation.mintime</td></tr>
                         #end if
--->                    </table>
+-->                 </table>
                 </div>
 
             </div>
@@ -223,20 +223,20 @@
         
        <footer>
             <div class="container-fix">
-	      <div style="text-align:center">
-		#if $Extras.has_key('you')
-            	<i class="fa fa-pied-piper-pp"> </i><a href=mailto:$Extras.email> $Extras.you</a> 
-            	#end if
-		&sdot;
-	    	Copyright <i class="fa fa-copyright"></i> $latest.dateTime.format("%Y") 
-	   	<br>
-	    	Disegnato da <a href="http://blauesledersofa.de">blaues Ledersofa</a>
-	    	&sdot; 
-            	Generato da <i class="fa fa-cog fa-spin fa-fw" aria-hidden="true"></i><a href="http://weewx.com/" target="_blank">WeeWX</a> 
-            	&sdot; 
-		Icone da <i class="fa fa-font-awesome" aria-hidden="true"></i><a href="http://fontawesome.io" target="_blank"> Font Awesome</a>
-	      </div>
-	    </div>
+            <div style="text-align:center">
+                #if $Extras.has_key('you')
+                <i class="fa fa-pied-piper-pp"> </i><a href=mailto:$Extras.email> $Extras.you</a> 
+                #end if
+                &sdot;
+                Copyright <i class="fa fa-copyright"></i> $latest.dateTime.format("%Y") 
+                <br>
+                Disegnato da <a href="http://blauesledersofa.de">blaues Ledersofa</a>
+                &sdot; 
+                Generato da <i class="fa fa-cog fa-spin fa-fw" aria-hidden="true"></i><a href="http://weewx.com/" target="_blank">WeeWX</a> 
+                &sdot; 
+                Icone da <i class="fa fa-font-awesome" aria-hidden="true"></i><a href="http://fontawesome.io" target="_blank"> Font Awesome</a>
+          </div>
+        </div>
         </footer>
 
         #if $Extras.has_key('googleAnalyticsId')
@@ -252,17 +252,17 @@
         </script>
         #end if
 
-<!-- Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon -->
-<script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-</script>
+        <!-- Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon -->
+        <script>
+          function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+          }
+        </script>
 
     </body>
 </html>
