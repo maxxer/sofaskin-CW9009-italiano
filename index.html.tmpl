@@ -63,10 +63,25 @@
         
         <!-- Skripte -->
         <script src="js/modernizr-2.6.2.min.js"></script>
-	<script src="js/checkdiff.js"></script>
-        
+    <script src="js/checkdiff.js"></script>
+
+    <script type="text/javascript">
+      function nocache(){
+        epoch=new Date().getTime();
+        elems=document.getElementsByTagName("img");
+        for (i=0;i<elems.length;i++){
+          item=elems[i].getAttribute("src");
+          if (String(item).endsWith(".png")) elems[i].setAttribute("src",item+"?"+epoch);
+        }
+        elems = document.getElementsByTagName("a");
+        for (i=0;i<elems.length;i++){
+          item=elems[i].getAttribute("href");
+          if (String(item).endsWith(".png")) elems[i].setAttribute("href",item+"?"+epoch);
+        }
+      }
+    </script>
     </head>
-    <body>
+    <body onload="nocache()">
         <header>
             <div class="container-fix" >
                 <div class="h-left" >
