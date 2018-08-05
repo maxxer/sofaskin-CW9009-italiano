@@ -144,12 +144,12 @@
                     <table class="tablespacer">
                         <tr><td>Pioggia Annua Totale</td><td>$rainyear.rain.sum</td><td></td></tr>
                         <tr><td>Intensit&agrave di Pioggia Max</td><td>$rainyear.rainRate.max</td><td>   $rainyear.rainRate.maxtime</td></tr>
-			<tr><td>$year($years_ago=1).dateTime.format("%Y") Rain Total</td><td>$year($years_ago=1).rain.sum</td><td></td></tr>
+                        <tr><td>$year($years_ago=1).dateTime.format("%Y") Rain Total</td><td>$year($years_ago=1).rain.sum</td><td></td></tr>
                         <tr><td>$year($years_ago=1).dateTime.format("%Y") High Rain Rate</td><td>$year($years_ago=1).rainRate.max</td><td>   $year($years_ago=1).rainRate.maxtime</td></tr>
                     </table>
                 </div>
-<!-- da attivare dopo un anno
-		<div class="card" >
+
+                <div class="card" >
                     <h1><i class="fa fa-calendar-o m-rot" ></i> Anno Precedente ($year($years_ago=1).dateTime.format("%Y"))</h1>
                     <table class="tablespacer">
                         <tr><td>Temperatura Max</td><td>$year($years_ago=1).outTemp.max</td><td>$year($years_ago=1).outTemp.maxtime</td></tr>
@@ -189,7 +189,6 @@
                 </div>
 
             </div>
--->            
             <div class="right" >
 
                 <div class="card cc graphs" >
