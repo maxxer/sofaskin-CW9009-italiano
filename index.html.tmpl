@@ -279,7 +279,33 @@
 
             </div>
             <div class="right" >
-
+                
+                <div class="card cc graphs" >
+                    <h1><i class="fa fa-line-chart m-gruen" ></i> Grafici</h1>
+                    
+                    <img src="daytempdew.png" alt="temperatures" />
+                    <img src="dayrain.png" alt="rain" />
+                    <img src="daywind.png" alt="wind" />
+                    <img src="daywinddir.png" alt="Hi Wind" />
+<!--                    <img src="daywindvec.png" alt="Wind Vector" />-->
+                    <img src="daytempchill.png" alt="heatchill" />
+                    <img src="daybarometer.png" alt="barometer"/>
+                    <img src="dayinhumid.png" alt="Outside Humidity" />
+<!--
+                    #if $day.radiation.has_data
+                    <img src="dayradiation.png" alt="Radiation" />
+                    #end if
+                    #if $day.UV.has_data
+                    <img src="dayuv.png" alt="UV Index" />
+                    #end if
+                    #if $day.rxCheckPercent.has_data
+                    <img src="dayrx.png" alt="day rx percent"/>
+                    #end if
+-->
+                    #if $day.extraTemp1.has_data
+                    <img src="daypond.png" alt="Pond Temperatures" />
+                    #end if
+                </div>
                 <div class="card" >
                     <h1><i class="fa fa-star-o m-rot" ></i> Almanacco</h1>
                     #if $almanac.hasExtras
@@ -340,33 +366,6 @@
                         <tr><td>Tramonto:</td><td>$almanac.sunset</td></tr>
                         <tr><td>Fase Lunare:</td><td>$almanac.moon_phase<br/>($almanac.moon_fullness% full)</td></tr>
                     </table>
-                    #end if
-                </div>
-                
-                <div class="card cc graphs" >
-                    <h1><i class="fa fa-line-chart m-gruen" ></i> Grafici</h1>
-                    
-                    <img src="daytempdew.png" alt="temperatures" />
-                    <img src="dayrain.png" alt="rain" />
-                    <img src="daywind.png" alt="wind" />
-                    <img src="daywinddir.png" alt="Hi Wind" />
-<!--                    <img src="daywindvec.png" alt="Wind Vector" />-->
-                    <img src="daytempchill.png" alt="heatchill" />
-                    <img src="daybarometer.png" alt="barometer"/>
-                    <img src="dayinhumid.png" alt="Outside Humidity" />
-<!--
-                    #if $day.radiation.has_data
-                    <img src="dayradiation.png" alt="Radiation" />
-                    #end if
-                    #if $day.UV.has_data
-                    <img src="dayuv.png" alt="UV Index" />
-                    #end if
-                    #if $day.rxCheckPercent.has_data
-                    <img src="dayrx.png" alt="day rx percent"/>
-                    #end if
--->
-                    #if $day.extraTemp1.has_data
-                    <img src="daypond.png" alt="Pond Temperatures" />
                     #end if
                 </div>
             </div>
