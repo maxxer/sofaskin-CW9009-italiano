@@ -37,10 +37,6 @@ Installare il template è come per la maggior parte degli altri skins. Devi mett
 
 Example:<br>
 [[StandardReport]]
-skin = Sofaskin 
+    skin = Sofaskin 
 
 Alla fine, devi mettere lo script historygenerator.py python in /usr/share/weewx/user directory. Lo skin.conf ha già il codice per usare queste tabelle così non devi modificare nulla a meno che tu non voglia cambiare i colori. Dovresti aggiornare le varibiali nel file skin.conf per collegarle alle informazioni della stazione. Più informazioni sullo script historygenerator.py e come usare le tabelle sono disponibili nel link di seguito. https://github.com/brewster76/fuzzy-archer/blob/master/INSTALL
-
-Se hai problemi, mi puoi scrivere una mail a josh@cw9009.x10host.com
-
-Ulteriori informazioni sul funzionamento si possono richiedere inviando una mail a info@meteopaupisi.it 
