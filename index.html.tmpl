@@ -218,50 +218,52 @@
                         #end if
                     </table>
                 </div>
-<!--
-        <div class="card" >
-            <!--Leap Year Code --!>
-            #set $yr = int($day.dateTime.format("%Y"))%4
-            #if $yr == 0
-            #if $yr % 100 == 0
-                #if $yr % 400 == 0
-                        #if $day.dateTime.format("%d-%b") == '29-Feb'
-                        #set $n = 1461
-                    #else if $day.dateTime.format("%d-%b") >= '01-Mar'
-                            #set $n = 366
+                
+                <div class="card" >
+                    #if $yesterday.rain.sum.raw == 0.0
+                    <h1><i class="fa fa-sun-o m-orange" ></i> Giornata di Ieri</h1>
+                    #else if $yesterday.rain.sum.raw >= 0.01
+                    <h1><i class="fa fa-umbrella m-blau" ></i> Giornata di Ieri</h1>
                     #else
-                        #set $n = 365
+                    <h1><i class="fa fa-sun-o m-orange" ></i> Giornata di Ieri</h1>
                     #end if
-                #else
-                    #set $n = 365
-                #end if
-            #else
-                #if $day.dateTime.format("%d-%b") == '29-Feb'
-                    #set $n = 1461
-                #else if $day.dateTime.format("%d-%b") >= '01-Mar'
-                            #set $n = 366
-                #else
-                        #set $n = 365
-                #end if
-            #end if
-            #else
-            #set $yrNew = ($yr - 1)
-            #if $yrNew % 100 == 0
-                #if $yrNew % 400 == 0
-                    #if $day.dateTime.format("%d-%b") < '01-Mar'
-                        #set $n = 366
-                    #else
-                        #set $n = 365
-                    #end if
-                #end if
-            #else
-                    #set $n = 365
-            #end if
-            #end if
-                   
-                    
+                    <table class="tablespacer">
+                        <tr><td>Temperatura Max</td><td>$yesterday.outTemp.max</td><td>$yesterday.outTemp.maxtime</td></tr>
+                        <tr><td>Temperatura Min</td><td>$yesterday.outTemp.min</td><td>$yesterday.outTemp.mintime</td></tr>
+                        <tr><td>Indice di Calore Max</td><td>$yesterday.heatindex.max</td><td>$yesterday.heatindex.maxtime</td></tr>
+                        <tr><td>Temperatura Percepita Min</td><td>$yesterday.windchill.min</td><td>$yesterday.windchill.mintime</td></tr>
+                        <tr><td>Punto di Rugiada Max</td><td>$yesterday.dewpoint.max</td><td>$yesterday.dewpoint.maxtime</td></tr>
+                        <tr><td>Punto di Rugiada Min</td><td>$yesterday.dewpoint.min</td><td>$yesterday.dewpoint.mintime</td></tr>
+                        <tr><td>Umidit&agrave Max</td><td>$yesterday.outHumidity.max</td><td>$yesterday.outHumidity.maxtime</td></tr>
+                        <tr><td>Umidit&agrave Min</td><td>$yesterday.outHumidity.min</td><td>$yesterday.outHumidity.mintime</td></tr>
+                        <tr><td>Pressione Max</td><td>$yesterday.barometer.max</td><td>$yesterday.barometer.maxtime</td></tr>
+                        <tr><td>Pressione Min</td><td>$yesterday.barometer.min</td><td>$yesterday.barometer.mintime</td></tr>
+                        <tr><td>Pioggia di Ieri</td><td>$yesterday.rain.sum</td><td></td></tr>
+                        <tr><td>Intensit&agrave di Pioggia Max</td><td>$yesterday.rainRate.max</td><td>$yesterday.rainRate.maxtime</td></tr>
+                        <tr><td>Raffica di Vento Max</td><td>$yesterday.wind.max $yesterday.wind.gustdir</td><td>$yesterday.wind.maxtime</td></tr>
+                        <tr><td>Vento Medio</td><td>$yesterday.wind.avg</td><td></td></tr>
+                        <tr><td>RMS Vento</td><td>$yesterday.wind.rms</td><td></td></tr>
+                        <tr><td>Velocit&agrave Vento Vettoriale</td><td>$yesterday.wind.vecavg</td><td></td></tr>
+                        <tr><td>Direzione Vento Vettoriale</td><td>$yesterday.wind.vecdir</td><td></td></tr>
+                        #if $yesterday.extraTemp1.has_data
+                        <tr><td>High Pond Temp</td><td>$yesterday.extraTemp1.max</td><td>$yesterday.extraTemp1.maxtime</td></tr>
+                        <tr><td>Low Pond Temp</td><td>$yesterday.extraTemp1.min</td><td>$yesterday.extraTemp1.mintime</td></tr>
+                        #end if
+                        #if $yesterday.UV.has_data
+                        <tr><td>High UV</td><td>$yesterday.UV.max</td><td>$yesterday.UV.maxtime</td></tr>
+                        <tr><td>Low UV</td><td>$yesterday.UV.min</td><td>$yesterday.UV.mintime</td></tr>
+                        #end if
+                        #if $yesterday.ET.has_data and $yesterday.ET.sum.raw >0.0
+                        <tr><td>High ET</td><td>$yesterday.ET.max</td><td>$yesterday.ET.maxtime</td></tr>
+                        <tr><td>Low ET</td><td>$yesterday.ET.min</td><td>$yesterday.ET.mintime</td></tr>
+                        #end if
+                        #if $yesterday.radiation.has_data
+                        <tr><td>High Radiation</td><td>$yesterday.radiation.max</td><td>$yesterday.radiation.maxtime</td></tr>
+                        <tr><td>Low Radiation</td><td>$yesterday.radiation.min</td><td>$yesterday.radiation.mintime</td></tr>
+                        #end if
+                    </table>
                 </div>
--->
+
         <!-- $Extras.cameratitle -->
         <!-- $Extras.cameratitle2 -->
 
