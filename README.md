@@ -35,8 +35,9 @@ Mostra un messaggio di allarme nella testata quando i dati meteo sono vecchio di
 <b>Istruzioni di installazione:</b><br>
 Installare il template è come per la maggior parte degli altri skins. Devi mettere i file dello skin in una propria cartella in /etc/weewx/skins directory. Devi anche cambiare la variabile skin nel file weewx.conf sotto Standard Reports.
 
-Example:<br>
-[[StandardReport]]
-    skin = Sofaskin 
-
+Example:
+<pre>
+    [[StandardReport]]
+        skin = Sofaskin 
+</pre>
 Alla fine, devi mettere lo script historygenerator.py python in /usr/share/weewx/user directory. Lo skin.conf ha già il codice per usare queste tabelle così non devi modificare nulla a meno che tu non voglia cambiare i colori. Dovresti aggiornare le varibiali nel file skin.conf per collegarle alle informazioni della stazione. Più informazioni sullo script historygenerator.py e come usare le tabelle sono disponibili nel link di seguito. https://github.com/brewster76/fuzzy-archer/blob/master/INSTALL
