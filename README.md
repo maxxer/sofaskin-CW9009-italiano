@@ -12,7 +12,6 @@ Sofaskin V1.1 è sviluppata da Sven su Neoground: http://neoground.com/projects/
 -    Refresh della pagina ogni dieci minuti.
 -    Aggiunto il codice da dajda.net per produrre le tabelle storiche. Lo script historygenerator.py deve essere aggiunto a WeeWx per far aggiornare le tabelle.
 -    Creata una pagina PHP template per mostrare i testi NOAA.
--    Aggiunto un allarme se i dati meteo non sono aggiornati da più di 30 minuti. (Scritto da Björn Torkelsson)
  
 
 <b>Responsive Menu:</b><br>
@@ -26,11 +25,6 @@ Lo script historygenerator.py era una parte del template sviluppato da http://ww
 
 
 ![template](https://cloud.githubusercontent.com/assets/22601363/20864962/3f40b91c-b9c2-11e6-8298-75bec529dc40.jpg)
-<br><br>
-<b>Allarme aggiornamenti:</b><br>
-Mostra un messaggio di allarme nella testata quando i dati meteo sono vecchio di oltre X minuti. Il tempo defailt è di 30 minuti ma può essere modificato nel file checkdiff.js nella cartella js. 
-
-![olddata](https://cloud.githubusercontent.com/assets/22601363/21075763/496c385c-bed7-11e6-82e8-789ffa300601.jpg)
 <br><br>
 <b>Istruzioni di installazione:</b><br>
 Installare il template è come per la maggior parte degli altri skins. Devi mettere i file dello skin in una propria cartella in /etc/weewx/skins directory. Devi anche cambiare la variabile skin nel file weewx.conf sotto Standard Reports.
