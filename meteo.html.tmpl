@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,9 +34,25 @@
         <!-- Skripte -->
         <script src="js/modernizr-2.6.2.min.js"></script>
         <script src="js/checkdiff.js"></script>
+        <script type="text/javascript">
+            function loadMe() {
+                var gpsStation = "$station.latitude[0]" + "." + "$station.latitude[1]".replace(".","") + "00, " + "$station.longitude[0]" + "." + "$station.longitude[1]".replace(".","") + "00";
+                document.getElementById("spaghetti").src = spaghetti(gpsStation);
+            }
+
+            function spaghetti(crd) {
+                var gps = crd.substring(crd.indexOf(",") + 1).trim() + "_" + crd.substring(0, crd.indexOf(","));
+                var d = new Date();
+                var time = d.getFullYear(); //anno yyyy
+                    time += (d.getMonth().toString().length == 1 ? "0" + d.getMonth().toString() : d.getMonth().toString()); // mese MM
+                    time += (d.getDate().toString().length == 1 ? "0" + d.getDate().toString() : d.getDate().toString()); // giorno gg
+                link = "http://modeles7.meteociel.fr/modeles/gens/runs/" + time + "00/graphe3_1000___" + gps + "_.gif";
+                return link;
+            }
+        </script>
     </head>
 
-    <body>
+    <body onload="loadMe();">
         <header>
             <div class="container-fix" >
                 <div class="h-left" >
@@ -74,7 +90,7 @@
             </div>
         </header>
     
-        <!-- Main container -->  
+        <!-- Main container -->
         <div class="main" >
         <div class="container" >
         <div class="left" >
@@ -92,7 +108,14 @@
 
         <div class="right" >
             <div class="card" >
-                <h1><i class="fa fa-history m-gruen" ></i> Storico Stazione</h1>
+                <h3><a id="btn1" class="cpointer" >Radar Italia</a></h3>
+                <a href="https://api.sat24.com/animated/IT/visual/3/Central%20European%20Standard%20Time/285230" target="_blank">
+                    <img id="radar" class="space small" src="https://api.sat24.com/animated/IT/visual/3/Central%20European%20Standard%20Time/285230" alt="Radar" />
+                </a>
+            </div>
+            <div class="card" >
+                <h3><a id="btn2" class="cpointer" >Radar Italia</a></h3>
+                <img id="spaghetti" class="space small" alt="Spaghetti" />
             </div>
         </div>
         </div>
