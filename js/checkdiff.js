@@ -1,6 +1,6 @@
 /* checkDiff
  *
- * Check if the
+ * Check if the difference from actual time to the value time from parameter input is more then a parametric value
  */
 
 function checkDiff(datestr) {
@@ -11,8 +11,8 @@ function checkDiff(datestr) {
     // Fixme: Add "icon"
     if (date - refreshed > diff) {
         text.innerHTML = "<i class='fa fa-exclamation-triangle m-orange'></i><b> Old Weather Data </b>";
-//  } else {
-//    text.innerHTML = "<i class=''></i> Fresh Weather";
+    } else {
+      text.innerHTML = "<i class=''></i> Fresh Weather";
     }
     document.getElementById('freshweather').appendChild(text);
 }
