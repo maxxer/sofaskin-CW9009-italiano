@@ -70,9 +70,6 @@
                         <tr><td><b>Software:</b></td><td><a href="http://weewx.com/" target="_blank" >WeeWX v$station.version</a></td></tr>
                         <tr><td><b>Weewx uptime:</b></td><td>$station.uptime</td></tr>
                         <tr><td><b>Server uptime:</b></td><td>$station.os_uptime</td></tr>
-                        #if $Extras.has_key('cwop') and $Extras.has_key('crahs')
-                        <tr><td><b>Station IDs:</b></td><td><a href="$Extras.cwop_url" target="_blank">$Extras.cwop</a> | <a href="$Extras.crahs_url" target="_blank">$Extras.crahs</a></td></tr>
-                        #end if
                     </table>
                 </div>
 

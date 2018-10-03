@@ -14,39 +14,22 @@
         <title>$station.location Condizioni Meteo Correnti</title>
         
         <!-- Open Graph -->
-        #if $Extras.has_key('cwop')
-        <meta property="og:site_name" content="$station.location Stazione Meteo ($Extras.cwop)" />
-        <meta property="og:title" content="$station.location ($Extras.cwop) Condizioni Meteo Correnti"/>
-        #else
         <meta property="og:site_name" content="$station.location Stazione Meteo" />
         <meta property="og:title" content="$station.location Condizioni Meteo Correnti"/>
-        #end if
         <meta property="og:image" content="$Extras.web_url/daytempdew.png"/>
         #if $Extras.has_key('web_url')
         <meta property="og:url" content="$Extras.web_url"/>
         #end if
-        #if $Extras.has_key('cwop')
-        <meta property="og:description" content="Condizioni Meteo Correnti a $station.location ($Extras.cwop) - sito meteo generato da WeeWX" />
-        #else
         <meta property="og:description" content="Condizioni Meteo Correnti a $station.location - sito meteo generato da WeeWX" />
-        #end if
         <meta property="og:type" content="website" />
 
         <!--SM Markups -->
-        #if $Extras.has_key('cwop')
-        <meta itemprop="name" content="$station.location ($Extras.cwop) Condizioni Meteo Correnti"/>
-        #else
         <meta itemprop="name" content="$station.location Condizioni Meteo Correnti"/>
-        #end if
         <meta itemprop="image" content="$Extras.web_url/daytempdew.png"/>
         #if $Extras.has_key('web_url')
         <meta itemprop="url" content="$Extras.web_url"/>
         #end if
-        #if $Extras.has_key('cwop')
-        <meta itemprop="description" content="Condizioni Meteo Correnti a $station.location ($Extras.cwop) - sito meteo generato da WeeWX" />
-        #else
         <meta itemprop="description" content="Condizioni Meteo Correnti a $station.location - sito meteo generato da WeeWX" />
-        #end if
 
         <!-- Icons -->
         <link rel="icon" href="favicon.ico" type="image/png">
@@ -97,9 +80,6 @@
                         <tr><td><b>Software:</b></td><td><a href="http://weewx.com/" target="_blank" >WeeWX v$station.version</a></td></tr>
                         <tr><td><b>Weewx uptime:</b></td><td>$station.uptime</td></tr>
                         <tr><td><b>Server uptime:</b></td><td>$station.os_uptime</td></tr>
-                        #if $Extras.has_key('cwop') and $Extras.has_key('crahs')
-                        <tr><td><b>Station IDs:</b></td><td><a href="$Extras.cwop_url" target="_blank">$Extras.cwop</a> | <a href="$Extras.crahs_url" target="_blank">$Extras.crahs</a></td></tr>
-                        #end if
                     </table>
                 </div>
 
