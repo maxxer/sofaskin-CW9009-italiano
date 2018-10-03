@@ -263,17 +263,22 @@
         <!-- $Extras.cameratitle -->
         <!-- $Extras.cameratitle2 -->
 
-<!-- Radar Italia -->
+                <!-- Radar -->
                 <div class="card">
-                    <a href='http://www.protezionecivile.gov.it/images/rete_radar/VMI/VMI.JPEG' target="_blank">
-                        <img id="radar" class="space small" src="http://www.protezionecivile.gov.it/images/rete_radar/VMI/VMI.JPEG" alt="Radar" />
+                    #if $Extras.has_key('radar_url')
+                    <a href="$Extras.radar_url" target="_blank">
+                    #end if
+                        #if $Extras.has_key('radar_img')
+                        <img id="radar" class="space small" src="$Extras.radar_img" alt="Radar" />
+                        #end if
+                    #if $Extras.has_key('radar_url')
                     </a>
+                    #end if
                     <h3>
                         <a id="btn1" class="cpointer" >Radar Italia</a> 
                     </h3>
                 </div>
-<!-- Fine Radar Italia -->
-
+                <!-- Fine Radar -->
 
             </div>
             <div class="right" >
