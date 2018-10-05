@@ -145,16 +145,17 @@
                     </table>
                 </div>
 
-<!-- personalizzazione Webcam 
-            <div class="card" >
-            <img class <h1><i class="fa fa-camera" style="color:#999"></i> Webcam</h1>
-            <div style="text-align:center">
-            <a href="web1.html"> <img src="/foto/webcam1/webcamsmall1.php" /></a><p>
-            <a href="web2.html"> <img src="/foto/webcam2/webcamsmall2.php" /></a><p>
-            <a href="web3.html"> <img src="/foto/webcam3/webcamsmall3.php" /></a><p>
-            </div>
-            </div>
- fine personalizzazione webcam -->
+                #if $Extras.has_key('cameratitle') and $Extras.has_key('camera')
+                <div class="card" >
+                    <img class <h1><i class="fa fa-camera" style="color:#999"></i> Webcam</h1>
+                    <div style="text-align:center">
+                        <a href="$Extras.camera"> <img src="$Extras.camera" /></a><p>
+                        #if $Extras.has_key('cameratitle2') and $Extras.has_key('camera2')
+                        <a href="$Extras.camera2"> <img src="$Extras.camera2" /></a><p>
+                        #end if
+                    </div>
+                </div>
+                #end if
 
                 <div class="card" >
                     <h1><i class="fa fa-moon-o m-grau" ></i> Dalla Mezzanotte</h1>
