@@ -107,14 +107,16 @@
         </div>
 
         <div class="right" >
+            #if $Extras.has_key('radar_gif')
             <div class="card" >
                 <h3><a id="btn1" class="cpointer" >Radar Italia</a></h3>
-                <a href="https://api.sat24.com/animated/IT/visual/3/Central%20European%20Standard%20Time/285230" target="_blank">
-                    <img id="radar" class="space small" src="https://api.sat24.com/animated/IT/visual/3/Central%20European%20Standard%20Time/285230" alt="Radar" />
+                <a href="$Extras.radar_gif" target="_blank">
+                    <img id="radar" class="space small" src="$Extras.radar_gif" alt="Radar" />
                 </a>
             </div>
+            #end if
             <div class="card" >
-                <h3><a id="btn2" class="cpointer" >Radar Italia</a></h3>
+                <h3><a id="btn2" class="cpointer" >Grafico Spaghetti</a></h3>
                 <img id="spaghetti" class="space small" alt="Spaghetti" />
             </div>
         </div>
@@ -124,17 +126,11 @@
         <footer>
             <div class="container-fix">
                 <div style="text-align:center">
-                #if $Extras.has_key('you')
-                <i class="fa fa-pied-piper-pp"> </i><a href=mailto:$Extras.email> $Extras.you</a> 
-                #end if
-                &sdot;
-                Copyright <i class="fa fa-copyright"></i> $latest.dateTime.format("%Y") 
-                <br>
-                Disegnato da <a href="http://blauesledersofa.de">blaues Ledersofa</a>
-                &sdot; 
-                Generato da <i class="fa fa-cog fa-spin fa-fw" aria-hidden="true"></i><a href="http://weewx.com/" target="_blank">WeeWX</a> 
-                &sdot; 
-                Icone da <i class="fa fa-font-awesome" aria-hidden="true"></i><a href="http://fontawesome.io" target="_blank"> Font Awesome</a>
+                    #if $Extras.has_key('you')
+                    <a href=mailto:$Extras.email> $Extras.you </a>
+                    &sdot;
+                    #end if
+                    Copyright <i class="fa fa-copyright"></i> $latest.dateTime.format("%Y")
                 </div>
             </div>
         </footer>

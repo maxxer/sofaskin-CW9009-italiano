@@ -244,20 +244,16 @@
         <!-- $Extras.cameratitle2 -->
 
                 <!-- Radar -->
+                #if $Extras.has_key('radar_url') and $Extras.has_key('radar_img')
                 <div class="card">
-                    #if $Extras.has_key('radar_url')
                     <a href="$Extras.radar_url" target="_blank">
-                    #end if
-                        #if $Extras.has_key('radar_img')
                         <img id="radar" class="space small" src="$Extras.radar_img" alt="Radar" />
-                        #end if
-                    #if $Extras.has_key('radar_url')
                     </a>
-                    #end if
                     <h3>
                         <a id="btn1" class="cpointer" >Radar Italia</a> 
                     </h3>
                 </div>
+                #end if
                 <!-- Fine Radar -->
 
             </div>
@@ -358,17 +354,11 @@
         <footer>
             <div class="container-fix">
                 <div style="text-align:center">
-                #if $Extras.has_key('you')
-                <i class="fa fa-pied-piper-pp"> </i><a href=mailto:$Extras.email> $Extras.you</a> 
-                #end if
-                &sdot;
-                Copyright <i class="fa fa-copyright"></i> $latest.dateTime.format("%Y") 
-                <br>
-                Disegnato da <a href="http://blauesledersofa.de">blaues Ledersofa</a>
-                &sdot; 
-                Generato da <i class="fa fa-cog fa-spin fa-fw" aria-hidden="true"></i><a href="http://weewx.com/" target="_blank">WeeWX</a> 
-                &sdot; 
-                Icone da <i class="fa fa-font-awesome" aria-hidden="true"></i><a href="http://fontawesome.io" target="_blank"> Font Awesome</a>
+                    #if $Extras.has_key('you')
+                    <a href=mailto:$Extras.email> $Extras.you </a>
+                    &sdot;
+                    #end if
+                    Copyright <i class="fa fa-copyright"></i> $latest.dateTime.format("%Y")
                 </div>
             </div>
         </footer>
