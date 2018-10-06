@@ -145,13 +145,13 @@
                     </table>
                 </div>
 
-                #if $Extras.has_key('cameratitle') and $Extras.has_key('camera')
+                #if $Extras.has_key('cameratitle') and $Extras.has_key('cameraurl')
                 <div class="card" >
                     <img class <h1><i class="fa fa-camera" style="color:#999"></i> Webcam</h1>
                     <div style="text-align:center">
-                        <a href="$Extras.camera"> <img src="$Extras.camera" /></a><p>
-                        #if $Extras.has_key('cameratitle2') and $Extras.has_key('camera2')
-                        <a href="$Extras.camera2"> <img src="$Extras.camera2" /></a><p>
+                        <a href="$Extras.cameraurl"> <img src="$Extras.cameraurl" alt="$Extras.cameratitle" /></a><p>
+                        #if $Extras.has_key('cameratitle2') and $Extras.has_key('cameraurl2')
+                        <a href="$Extras.cameraurl2"> <img src="$Extras.cameraurl2" alt="$Extras.cameratitle2" /></a><p>
                         #end if
                     </div>
                 </div>
