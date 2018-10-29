@@ -111,11 +111,21 @@
                         <tr><td>RMS Vento</td><td>$year.wind.rms</td><td></td></tr>
                         <tr><td>Vento Medio Vettoriale</td><td>$year.wind.vecavg</td><td></td></tr>
                         <tr><td>Direzione Media Vettoriale</td><td>$year.wind.vecdir</td><td></td></tr>
-<!--                        <tr><td>High Inside Temperature</td><td>$year.inTemp.max</td><td>$year.inTemp.maxtime</td></tr>
+<!--
+                        <tr><td>High Inside Temperature</td><td>$year.inTemp.max</td><td>$year.inTemp.maxtime</td></tr>
                         <tr><td>Low Inside Temperature</td><td>$year.inTemp.min</td><td>$year.inTemp.mintime</td></tr>
                         #if $year.extraTemp1.has_data
-                        <tr><td>High Pond Temp</td><td>$year.extraTemp1.max</td><td>$year.extraTemp1.maxtime</td></tr>
-                        <tr><td>Low Pond Temp</td><td>$year.extraTemp1.min</td><td>$year.extraTemp1.mintime</td></tr>
+                        <tr><td>Particolato PM 1 Max</td><td>$year.extraTemp1.max</td><td>$year.extraTemp1.maxtime</td></tr>
+                        <tr><td>Particolato PM 1 Min</td><td>$year.extraTemp1.min</td><td>$year.extraTemp1.mintime</td></tr>
+                        #end if
+-->
+                        #if $year.extraTemp2.has_data
+                        <tr><td>Particolato PM 2.5 Max</td><td>$year.extraTemp2.max</td><td>$year.extraTemp2.maxtime</td></tr>
+                        <tr><td>Particolato PM 2.5 Max</td><td>$year.extraTemp2.min</td><td>$year.extraTemp2.mintime</td></tr>
+                        #end if
+                        #if $year.extraTemp3.has_data
+                        <tr><td>Particolato PM 10 Max</td><td>$year.extraTemp3.max</td><td>$year.extraTemp3.maxtime</td></tr>
+                        <tr><td>Particolato PM 10 Max</td><td>$year.extraTemp3.min</td><td>$year.extraTemp3.mintime</td></tr>
                         #end if
                         #if $year.UV.has_data
                         <tr><td>High UV</td><td>$year.UV.max</td><td>$year.UV.maxtime</td></tr>
@@ -129,7 +139,7 @@
                         <tr><td>High Radiation</td><td>$year.radiation.max</td><td>$year.radiation.maxtime</td></tr>
                         <tr><td>Low Radiation</td><td>$year.radiation.min</td><td>$year.radiation.mintime</td></tr>
                         #end if
- -->                   </table>
+                    </table>
                 </div>
 
                 <div class="card" >
@@ -160,11 +170,21 @@
                         <tr><td>RMS Vento</td><td>$year($years_ago=1).wind.rms</td><td></td></tr>
                         <tr><td>Vento Medio Vettoriale</td><td>$year($years_ago=1).wind.vecavg</td><td></td></tr>
                         <tr><td>Direzione Media Vettoriale</td><td>$year($years_ago=1).wind.vecdir</td><td></td></tr>
-<!--                        <tr><td>High Inside Temperature</td><td>$year($years_ago=1).inTemp.max</td><td>$year($years_ago=1).inTemp.maxtime</td></tr>
+<!--
+                        <tr><td>High Inside Temperature</td><td>$year($years_ago=1).inTemp.max</td><td>$year($years_ago=1).inTemp.maxtime</td></tr>
                         <tr><td>Low Inside Temperature</td><td>$year($years_ago=1).inTemp.min</td><td>$year($years_ago=1).inTemp.mintime</td></tr>
                         #if $year($years_ago=1).extraTemp1.has_data
-                        <tr><td>High Pond Temp</td><td>$year($years_ago=1).extraTemp1.max</td><td>$year($years_ago=1).extraTemp1.maxtime</td></tr>
-                        <tr><td>Low Pond Temp</td><td>$year($years_ago=1).extraTemp1.min</td><td>$year($years_ago=1).extraTemp1.mintime</td></tr>
+                        <tr><td>Particolato PM 1 Max</td><td>$year($years_ago=1).extraTemp1.max</td><td>$year($years_ago=1).extraTemp1.maxtime</td></tr>
+                        <tr><td>Particolato PM 1 Min</td><td>$year($years_ago=1).extraTemp1.min</td><td>$year($years_ago=1).extraTemp1.mintime</td></tr>
+                        #end if
+-->
+                        #if $year($years_ago=1).extraTemp2.has_data
+                        <tr><td>Particolato PM 2.5 Max</td><td>$year($years_ago=1).extraTemp2.max</td><td>$year($years_ago=1).extraTemp2.maxtime</td></tr>
+                        <tr><td>Particolato PM 2.5 Min</td><td>$year($years_ago=1).extraTemp2.min</td><td>$year($years_ago=1).extraTemp2.mintime</td></tr>
+                        #end if
+                        #if $year($years_ago=1).extraTemp3.has_data
+                        <tr><td>Particolato PM 10 Max</td><td>$year($years_ago=1).extraTemp3.max</td><td>$year($years_ago=1).extraTemp3.maxtime</td></tr>
+                        <tr><td>Particolato PM 10 Min</td><td>$year($years_ago=1).extraTemp3.min</td><td>$year($years_ago=1).extraTemp3.mintime</td></tr>
                         #end if
                         #if $year($years_ago=1).UV.has_data
                         <tr><td>High UV</td><td>$year($years_ago=1).UV.max</td><td>$year($years_ago=1).UV.maxtime</td></tr>
@@ -178,7 +198,7 @@
                         <tr><td>High Radiation</td><td>$year($years_ago=1).radiation.max</td><td>$year($years_ago=1).radiation.maxtime</td></tr>
                         <tr><td>Low Radiation</td><td>$year($years_ago=1).radiation.min</td><td>$year($years_ago=1).radiation.mintime</td></tr>
                         #end if
--->                    </table>
+                    </table>
                 </div>
 
             </div>
