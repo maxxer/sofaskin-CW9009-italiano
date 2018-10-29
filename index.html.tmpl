@@ -145,9 +145,21 @@
                 <div class="card" >
                     <img class <h1><i class="fa fa-camera" style="color:#999"></i> Webcam</h1>
                     <div style="text-align:center">
-                        <a href="$Extras.cameraurl"> <img src="$Extras.cameraurl" alt="$Extras.cameratitle" /></a><p>
+                        <a href="$Extras.cameraurl">
+                            #if $Extras.has_key('cameraurlsmall')
+                            <img src="$Extras.cameraurlsmall" alt="$Extras.cameratitle" />
+                            #else
+                            <img src="$Extras.cameraurl" alt="$Extras.cameratitle" />
+                            #end if
+                        </a><p>
                         #if $Extras.has_key('cameratitle2') and $Extras.has_key('cameraurl2')
-                        <a href="$Extras.cameraurl2"> <img src="$Extras.cameraurl2" alt="$Extras.cameratitle2" /></a><p>
+                        <a href="$Extras.cameraurl2">
+                            #if $Extras.has_key('cameraurl2small')
+                            <img src="$Extras.cameraurl2small" alt="$Extras.cameratitle2" />
+                            #else
+                            <img src="$Extras.cameraurl2" alt="$Extras.cameratitle2" />
+                            #end if
+                        </a><p>
                         #end if
                     </div>
                 </div>
