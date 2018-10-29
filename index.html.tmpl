@@ -124,11 +124,7 @@
                         #else
                         <tr><td>Vento</td><td>$current.windSpeed $current.windDir.ordinal_compass ($current.windDir)</td></tr>
                         #end if
-                        #if $current.windGust.raw == 0.0
                         <tr><td>Raffica di Vento</td><td>$current.windGust </td></tr>
-                        #else
-                        <tr><td>Raffica di Vento</td><td>$current.windGust $current.windGustDir.ordinal_compass ($current.windGustDir)</td></tr>
-                        #end if
                         <tr><td>Pioggia</td><td>$current.rainRate</td></tr>
                         #if $day.extraTemp1.has_data
                         <tr><td>Pond Temperature</td><td>$current.extraTemp1</td></tr>
@@ -172,7 +168,7 @@
                         <tr><td>Pressione Min</td><td>$day.barometer.min</td><td>$day.barometer.mintime</td></tr>
                         <tr><td>Pioggia Odierna</td><td>$day.rain.sum</td><td></td></tr>
                         <tr><td>Intensit&agrave; di Pioggia Max</td><td>$day.rainRate.max</td><td>$day.rainRate.maxtime</td></tr>
-                        <tr><td>Raffica di Vento Max</td><td>$day.wind.max $day.wind.gustdir</td><td>$day.wind.maxtime</td></tr>
+                        <tr><td>Raffica di Vento Max</td><td>$day.wind.max</td><td>$day.wind.maxtime</td></tr>
                         <tr><td>Vento Medio</td><td>$day.wind.avg</td><td></td></tr>
                         <tr><td>RMS Vento</td><td>$day.wind.rms</td><td></td></tr>
                         <tr><td>Velocit&agrave; Vento Vettoriale</td><td>$day.wind.vecavg</td><td></td></tr>
@@ -217,7 +213,7 @@
                         <tr><td>Pressione Min</td><td>$yesterday.barometer.min</td><td>$yesterday.barometer.mintime</td></tr>
                         <tr><td>Pioggia di Ieri</td><td>$yesterday.rain.sum</td><td></td></tr>
                         <tr><td>Intensit&agrave; di Pioggia Max</td><td>$yesterday.rainRate.max</td><td>$yesterday.rainRate.maxtime</td></tr>
-                        <tr><td>Raffica di Vento Max</td><td>$yesterday.wind.max $yesterday.wind.gustdir</td><td>$yesterday.wind.maxtime</td></tr>
+                        <tr><td>Raffica di Vento Max</td><td>$yesterday.wind.max</td><td>$yesterday.wind.maxtime</td></tr>
                         <tr><td>Vento Medio</td><td>$yesterday.wind.avg</td><td></td></tr>
                         <tr><td>RMS Vento</td><td>$yesterday.wind.rms</td><td></td></tr>
                         <tr><td>Velocit&agrave; Vento Vettoriale</td><td>$yesterday.wind.vecavg</td><td></td></tr>
