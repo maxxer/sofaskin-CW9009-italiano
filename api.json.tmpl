@@ -28,7 +28,13 @@
       "windGustDir":"$current.windGustDir",
       "rainRate":"$current.rainRate",
       #if $day.extraTemp1.has_data
-      "pondTemp":"$current.extraTemp1",
+      "PM1":"$current.extraTemp1",
+      #end if
+      #if $day.extraTemp2.has_data
+      "PM2_5":"$current.extraTemp2",
+      #end if
+      #if $day.extraTemp3.has_data
+      "PM10":"$current.extraTemp3",
       #end if
       #if $day.UV.has_data
       "UV":"$current.UV",
@@ -73,10 +79,22 @@
       "windVecAvg":"$day.wind.vecavg",
       "windVecDir":"$day.wind.vecdir",
       #if $day.extraTemp1.has_data
-      "pondTempMaxValue":"$day.extraTemp1.max",
-      "pondTempMaxTime":"$day.extraTemp1.maxtime",
-      "pondTempMinValue":"$day.extraTemp1.min",
-      "pondTempMinTime":"$day.extraTemp1.mintime",
+      "PM1MaxValue":"$day.extraTemp1.max",
+      "PM1TempMaxTime":"$day.extraTemp1.maxtime",
+      "PM1TempMinValue":"$day.extraTemp1.min",
+      "PM1TempMinTime":"$day.extraTemp1.mintime",
+      #end if
+      #if $day.extraTemp2.has_data
+      "PM2_5MaxValue":"$day.extraTemp2.max",
+      "PM2_5TempMaxTime":"$day.extraTemp2.maxtime",
+      "PM2_5TempMinValue":"$day.extraTemp2.min",
+      "PM2_5TempMinTime":"$day.extraTemp2.mintime",
+      #end if
+      #if $day.extraTemp3.has_data
+      "PM10MaxValue":"$day.extraTemp3.max",
+      "PM10TempMaxTime":"$day.extraTemp3.maxtime",
+      "PM10TempMinValue":"$day.extraTemp3.min",
+      "PM10TempMinTime":"$day.extraTemp3.mintime",
       #end if
       #if $day.UV.has_data
       "UVMaxValue":"$day.UV.max",
@@ -133,10 +151,22 @@
       "windVecAvg":"$week.wind.vecavg",
       "windVecDir":"$week.wind.vecdir",
       #if $week.extraTemp1.has_data
-      "highPondValue":"$week.extraTemp1.max",
-      "highPondTime":"$week.extraTemp1.maxtime",
-      "lowPondValue":"$week.extraTemp1.min",
-      "lowPondTime":"$week.extraTemp1.mintime",
+      "highPM1Value":"$week.extraTemp1.max",
+      "highPM1Time":"$week.extraTemp1.maxtime",
+      "lowPM1Value":"$week.extraTemp1.min",
+      "lowPM1Time":"$week.extraTemp1.mintime",
+      #end if
+      #if $week.extraTemp2.has_data
+      "highPM2_5Value":"$week.extraTemp2.max",
+      "highPM2_5Time":"$week.extraTemp2.maxtime",
+      "lowPM2_5Value":"$week.extraTemp2.min",
+      "lowPM2_5Time":"$week.extraTemp2.mintime",
+      #end if
+      #if $week.extraTemp3.has_data
+      "highPM10Value":"$week.extraTemp3.max",
+      "highPM10Time":"$week.extraTemp3.maxtime",
+      "lowPM10Value":"$week.extraTemp3.min",
+      "lowPM10Time":"$week.extraTemp3.mintime",
       #end if
       #if $week.UV.has_data
       "highUvValue":"$week.UV.max",
@@ -193,10 +223,22 @@
       "windVecAvg":"$month.wind.vecavg",
       "windVecDir":"$month.wind.vecdir",
       #if $month.extraTemp1.has_data
-      "highPondValue":"$month.extraTemp1.max",
-      "highPondTime":"$month.extraTemp1.maxtime",
-      "lowPondValue":"$month.extraTemp1.min",
-      "lowPondTime":"$month.extraTemp1.mintime",
+      "highPM1Value":"$month.extraTemp1.max",
+      "highPM1Time":"$month.extraTemp1.maxtime",
+      "lowPM1Value":"$month.extraTemp1.min",
+      "lowPM1Time":"$month.extraTemp1.mintime",
+      #end if
+      #if $month.extraTemp2.has_data
+      "highPM2_5Value":"$month.extraTemp2.max",
+      "highPM2_5Time":"$month.extraTemp2.maxtime",
+      "lowPM2_5Value":"$month.extraTemp2.min",
+      "lowPM2_5Time":"$month.extraTemp2.mintime",
+      #end if
+      #if $month.extraTemp3.has_data
+      "highPM10Value":"$month.extraTemp3.max",
+      "highPM10Time":"$month.extraTemp3.maxtime",
+      "lowPM10Value":"$month.extraTemp3.min",
+      "lowPM10Time":"$month.extraTemp3.mintime",
       #end if
       #if $month.UV.has_data
       "highUvValue":"$month.UV.max",
@@ -253,10 +295,22 @@
       "windVecAvg":"$year.wind.vecavg",
       "windVecDir":"$year.wind.vecdir",
       #if $year.extraTemp1.has_data
-      "highPondValue":"$year.extraTemp1.max",
-      "highPondTime":"$year.extraTemp1.maxtime",
-      "lowPondValue":"$year.extraTemp1.min",
-      "lowPondTime":"$year.extraTemp1.mintime",
+      "highPM1Value":"$year.extraTemp1.max",
+      "highPM1Time":"$year.extraTemp1.maxtime",
+      "lowPM1Value":"$year.extraTemp1.min",
+      "lowPM1Time":"$year.extraTemp1.mintime",
+      #end if
+      #if $year.extraTemp2.has_data
+      "highPM2_5Value":"$year.extraTemp2.max",
+      "highPM2_5Time":"$year.extraTemp2.maxtime",
+      "lowPM2_5Value":"$year.extraTemp2.min",
+      "lowPM2_5Time":"$year.extraTemp2.mintime",
+      #end if
+      #if $year.extraTemp3.has_data
+      "highPM10Value":"$year.extraTemp3.max",
+      "highPM10Time":"$year.extraTemp3.maxtime",
+      "lowPM10Value":"$year.extraTemp3.min",
+      "lowPM10Time":"$year.extraTemp3.mintime",
       #end if
       #if $year.UV.has_data
       "highUvValue":"$year.UV.max",
