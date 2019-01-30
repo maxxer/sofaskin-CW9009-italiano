@@ -51,11 +51,13 @@
             for (i=0;i<elems.length;i++){
               item=elems[i].getAttribute("src");
               if (String(item).endsWith(".png")) elems[i].setAttribute("src",item+"?"+epoch);
+              if (String(item).endsWith(".php")) elems[i].setAttribute("src",item+"?"+epoch);
             }
             elems = document.getElementsByTagName("a");
             for (i=0;i<elems.length;i++){
               item=elems[i].getAttribute("href");
               if (String(item).endsWith(".png")) elems[i].setAttribute("href",item+"?"+epoch);
+              if (String(item).endsWith(".php")) elems[i].setAttribute("href",item+"?"+epoch);
             }
           }
         </script>
