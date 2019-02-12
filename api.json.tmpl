@@ -119,6 +119,78 @@
       "inTempMinValue":"$day.inTemp.min",
       "inTempMinTime":"$day.inTemp.mintime"
     },
+    "yesterday": {
+      "tempMaxValue":"$yesterday.outTemp.max",
+      "tempMaxTime":"$yesterday.outTemp.maxtime",
+      "tempMinValue":"$yesterday.outTemp.min",
+      "tempMinTime":"$yesterday.outTemp.mintime",
+      "heatIndexMaxValue":"$yesterday.heatindex.max",
+      "heatIndexMaxTime":"$yesterday.heatindex.maxtime",
+      "windChillMinValue":"$yesterday.windchill.min",
+      "windChillMinTime":"$yesterday.windchill.mintime",
+      "humidityMaxValue":"$yesterday.outHumidity.max",
+      "humidityMaxTime":"$yesterday.outHumidity.maxtime",
+      "humidityMinValue":"$yesterday.outHumidity.min",
+      "humidityMinTime":"$yesterday.outHumidity.mintime",
+      "dewpointMaxValue":"$yesterday.dewpoint.max",
+      "dewpointMaxTime":"$yesterday.dewpoint.maxtime",
+      "dewpointMinValue":"$yesterday.dewpoint.min",
+      "dewpointMinTime":"$yesterday.dewpoint.mintime",
+      "barometerMaxValue":"$yesterday.barometer.max",
+      "barometerMaxTime":"$yesterday.barometer.maxtime",
+      "barometerMinValue":"$yesterday.barometer.min",
+      "barometerMinTime":"$yesterday.barometer.mintime",
+      "rainSum":"$yesterday.rain.sum",
+      "rainRateMaxValue":"$yesterday.rainRate.max",
+      "rainRateMaxTime":"$yesterday.rainRate.maxtime",
+      "windMaxValue":"$yesterday.wind.max",
+      "windMaxGustDir":"$yesterday.wind.gustdir",
+      "windMaxTime":"$yesterday.wind.maxtime",
+      "windAvg":"$yesterday.wind.avg",
+      "windRms":"$yesterday.wind.rms",
+      "windVecAvg":"$yesterday.wind.vecavg",
+      "windVecDir":"$yesterday.wind.vecdir",
+      #if $yesterday.extraTemp1.has_data
+      "PM1MaxValue":"$yesterday.extraTemp1.max",
+      "PM1TempMaxTime":"$yesterday.extraTemp1.maxtime",
+      "PM1TempMinValue":"$yesterday.extraTemp1.min",
+      "PM1TempMinTime":"$yesterday.extraTemp1.mintime",
+      #end if
+      #if $yesterday.extraTemp2.has_data
+      "PM2_5MaxValue":"$yesterday.extraTemp2.max",
+      "PM2_5TempMaxTime":"$yesterday.extraTemp2.maxtime",
+      "PM2_5TempMinValue":"$yesterday.extraTemp2.min",
+      "PM2_5TempMinTime":"$yesterday.extraTemp2.mintime",
+      #end if
+      #if $yesterday.extraTemp3.has_data
+      "PM10MaxValue":"$yesterday.extraTemp3.max",
+      "PM10TempMaxTime":"$yesterday.extraTemp3.maxtime",
+      "PM10TempMinValue":"$yesterday.extraTemp3.min",
+      "PM10TempMinTime":"$yesterday.extraTemp3.mintime",
+      #end if
+      #if $yesterday.UV.has_data
+      "UVMaxValue":"$yesterday.UV.max",
+      "UVMaxTime":"$yesterday.UV.maxtime",
+      "UVMinValue":"$yesterday.UV.min",
+      "UVMinTime":"$yesterday.UV.mintime",
+      #end if
+      #if $yesterday.ET.has_data and $yesterday.ET.sum.raw >0.0
+      "ETMaxValue":"$yesterday.ET.max",
+      "ETMaxTime":"$yesterday.ET.maxtime",
+      "ETMinValue":"$yesterday.ET.min",
+      "ETMinTime":"$yesterday.ET.mintime",
+      #end if
+      #if $yesterday.radiation.has_data
+      "radiationMaxValue":"$yesterday.radiation.max",
+      "radiationMaxTime":"$yesterday.radiation.maxtime",
+      "radiationMinValue":"$yesterday.radiation.min",
+      "radiationMinTime":"$yesterday.radiation.mintime",
+      #end if
+      "inTempMaxValue":"$yesterday.inTemp.max",
+      "inTempMaxTime":"$yesterday.inTemp.maxtime",
+      "inTempMinValue":"$yesterday.inTemp.min",
+      "inTempMinTime":"$yesterday.inTemp.mintime"
+    },
     "thisWeek": {
       "tempMaxValue":"$week.outTemp.max",
       "tempMaxTime":"$week.outTemp.maxtime",
