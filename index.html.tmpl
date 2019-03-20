@@ -48,6 +48,7 @@
           function nocache(){
             epoch=new Date().getTime();
             elems=document.getElementsByTagName("img");
+            var item;
             for (i=0;i<elems.length;i++){
               item=elems[i].getAttribute("src");
               if (String(item).endsWith(".png")) elems[i].setAttribute("src",item+"?"+epoch);
