@@ -115,8 +115,16 @@
                 </a>
             </div>
             #end if
+            #if $Extras.has_key('meteogram_img')
             <div class="card" >
-                <h3><a id="btn2" class="cpointer" >Grafico Spaghetti</a></h3>
+                <h3><a id="btn2" class="cpointer" >Meteogramma</a></h3>
+                <a href="$Extras.meteogram_img" target="_blank">
+                    <img id="meteogramma" class="space small" src="$Extras.meteogram_img" alt="Meteogramma" />
+                </a>
+            </div>
+            #end if
+            <div class="card" >
+                <h3><a id="btn3" class="cpointer" >Grafico Spaghetti</a></h3>
                 <img id="spaghetti" class="space small" alt="Spaghetti" />
             </div>
         </div>
