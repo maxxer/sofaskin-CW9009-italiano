@@ -13,6 +13,7 @@ if(empty(\$_REQUEST["report"])) {
      \$report = filter_var(\$_REQUEST["report"],FILTER_SANITIZE_URL);
 }
 
+/*
 //Get labels for meta and page titles
 \$labels = split("[-.]", \$report);
 \$count = count(\$labels);
@@ -24,6 +25,7 @@ if (\$count == 3){
 if (\$count == 4){
 	\$title = date("F Y", mktime(0, 0, 0, \$labels[2], 1, \$labels[1]));
 }
+*/
 ?>
 
         <meta charset="utf-8">
