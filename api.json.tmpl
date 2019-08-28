@@ -407,9 +407,81 @@
       "inTempMinValue":"$year.inTemp.min",
       "inTempMinTime":"$year.inTemp.mintime"
     },
-    "almanach":{
+    "allTime": {
+      "tempMaxValue":"$alltime.outTemp.max",
+      "tempMaxTime":"$alltime.outTemp.maxtime",
+      "tempMinValue":"$alltime.outTemp.min",
+      "tempMinTime":"$alltime.outTemp.mintime",
+      "heatIndexMaxValue":"$alltime.heatindex.max",
+      "heatIndexMaxTime":"$alltime.heatindex.maxtime",
+      "windChillMinValue":"$alltime.windchill.min",
+      "windChillMinTime":"$alltime.windchill.mintime",
+      "humidityMaxValue":"$alltime.outHumidity.max",
+      "humidityMaxTime":"$alltime.outHumidity.maxtime",
+      "humidityMinValue":"$alltime.outHumidity.min",
+      "humidityMinTime":"$alltime.outHumidity.mintime",
+      "dewpointMaxValue":"$alltime.dewpoint.max",
+      "dewpointMaxTime":"$alltime.dewpoint.maxtime",
+      "dewpointMinValue":"$alltime.dewpoint.min",
+      "dewpointMinTime":"$alltime.dewpoint.mintime",
+      "barometerMaxValue":"$alltime.barometer.max",
+      "barometerMaxTime":"$alltime.barometer.maxtime",
+      "barometerMinValue":"$alltime.barometer.min",
+      "barometerMinTime":"$alltime.barometer.mintime",
+      "rainSum":"$alltime.rain.sum",
+      "rainRateMaxValue":"$alltime.rainRate.max",
+      "rainRateMaxTime":"$alltime.rainRate.maxtime",
+      "windMaxValue":"$alltime.wind.max",
+      "windMaxGustDir":"$alltime.wind.gustdir",
+      "windMaxTime":"$alltime.wind.maxtime",
+      "windAvg":"$alltime.wind.avg",
+      "windRms":"$alltime.wind.rms",
+      "windVecAvg":"$alltime.wind.vecavg",
+      "windVecDir":"$alltime.wind.vecdir",
+      #if $alltime.extraTemp1.has_data
+      "highPM1Value":"$alltime.extraTemp1.max",
+      "highPM1Time":"$alltime.extraTemp1.maxtime",
+      "lowPM1Value":"$alltime.extraTemp1.min",
+      "lowPM1Time":"$alltime.extraTemp1.mintime",
+      #end if
+      #if $alltime.extraTemp2.has_data
+      "highPM2_5Value":"$alltime.extraTemp2.max",
+      "highPM2_5Time":"$alltime.extraTemp2.maxtime",
+      "lowPM2_5Value":"$alltime.extraTemp2.min",
+      "lowPM2_5Time":"$alltime.extraTemp2.mintime",
+      #end if
+      #if $alltime.extraTemp3.has_data
+      "highPM10Value":"$alltime.extraTemp3.max",
+      "highPM10Time":"$alltime.extraTemp3.maxtime",
+      "lowPM10Value":"$alltime.extraTemp3.min",
+      "lowPM10Time":"$alltime.extraTemp3.mintime",
+      #end if
+      #if $alltime.UV.has_data
+      "highUvValue":"$alltime.UV.max",
+      "highUvTime":"$alltime.UV.maxtime",
+      "lowUvValue":"$alltime.UV.min",
+      "lowUvTime":"$alltime.UV.mintime",
+      #end if
+      #if $alltime.ET.has_data and $alltime.ET.sum.raw >0.0
+      "highEtValue":"$alltime.ET.max",
+      "highEtTime":"$alltime.ET.maxtime",
+      "lowEtValue":"$alltime.ET.min",
+      "lowEtTime":"$alltime.ET.mintime",
+      #end if
+      #if $alltime.radiation.has_data
+      "highRadiationValue":"$alltime.radiation.max",
+      "highRadiationTime":"$alltime.radiation.maxtime",
+      "lowRadiationValue":"$alltime.radiation.min",
+      "lowRadiationTime":"$alltime.radiation.mintime",
+      #end if
+      "inTempMaxValue":"$alltime.inTemp.max",
+      "inTempMaxTime":"$alltime.inTemp.maxtime",
+      "inTempMinValue":"$alltime.inTemp.min",
+      "inTempMinTime":"$alltime.inTemp.mintime"
+    },
+    "almanach": {
       #if $almanac.hasExtras
-      "sun":{
+      "sun": {
         "startCivilTwilight":"$almanac(horizon=-6).sun(use_center=1).rise",
         "sunrise":"$almanac.sun.rise",
         "transit":"$almanac.sun.transit",
@@ -422,7 +494,7 @@
         "equinox":"$almanac.next_equinox",
         "solstice":"$almanac.next_solstice"
       },
-      "moon":{
+      "moon": {
         "rise":"$almanac.moon.rise",
         "transit":"$almanac.moon.transit",
         "set":"$almanac.moon.set",
@@ -436,11 +508,11 @@
         "fullness":"$almanac.moon_fullness%"
       }
       #else
-      "sun":{
+      "sun": {
         "sunrise":"$almanac.sunrise",
         "sunset":"$almanac.sunset",
       },
-      "moon":{
+      "moon": {
         "phase":"$almanac.moon_phase",
         "fullness":"$almanac.moon_fullness%"
       }
