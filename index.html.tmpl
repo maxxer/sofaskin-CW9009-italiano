@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html itemscope itemtype="http://schema.org/WebPage">
+<html lang="it" itemscope itemtype="http://schema.org/WebPage">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
         #if $Extras.has_key('web_url')
         <meta property="og:url" content="$Extras.web_url"/>
         #end if
-        <meta property="og:description" content="Condizioni Meteo Correnti a $station.location - sito meteo generato da WeeWX" />
+        <meta property="og:description" content="Condizioni meteo correnti a $station.location - sito meteo generato da WeeWX" />
         <meta property="og:type" content="website" />
 
         <!--SM Markups -->
@@ -36,8 +36,8 @@
         <link rel="apple-touch-icon" href="touch-icon.png"/>
         
         <!-- Styles -->
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
         
         <!-- Skripte -->
@@ -108,11 +108,11 @@
                 
                 <div class="card" >
                     #if $current.rainRate.raw == 0.0
-                    <h1><i class="fa fa-sun-o m-orange" ></i> Condizioni Correnti</h1>
+                    <h1><i class="fa fa-sun-o m-orange" ></i> Condizioni correnti</h1>
                     #else if $current.rainRate.raw >= 0.01
-                    <h1><i class="fa fa-umbrella m-blau" ></i> Condizioni Correnti</h1>
+                    <h1><i class="fa fa-umbrella m-blau" ></i> Condizioni correnti</h1>
                     #else
-                    <h1><i class="fa fa-sun-o m-orange" ></i> Condizioni Correnti</h1>
+                    <h1><i class="fa fa-sun-o m-orange" ></i> Condizioni correnti</h1>
                     #end if
                     <table class="tablespacer">
                         <tr><td>Temperatura</td><td>$current.outTemp</td></tr>
@@ -147,7 +147,7 @@
                         <tr><td>ET</td><td>$current.ET</td></tr>
                         #end if
                         #if $day.radiation.has_data
-                        <tr><td>Solar Radiation</td><td>$current.radiation</td></tr>
+                        <tr><td>Radiazione solare</td><td>$current.radiation</td></tr>
                         #end if
                         #set $CBA = int(125 * ($current.outTemp.raw - $current.dewpoint.raw) + 650)
                         <tr><td>Altezza Base Cumuli</td><td>$CBA m</td></tr>
